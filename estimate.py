@@ -1,5 +1,6 @@
 import math
 import unittest
+import random
 
 def monte_carlo(n):
     poi_in_cir=0
