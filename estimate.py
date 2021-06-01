@@ -1,6 +1,21 @@
 import math
 import unittest
 
+def wallis(n):
+    poi_in_cir=0
+    poi_in_sqr=0
+    for i in range(n**2):  #since we need both x and y coordinates
+        x_rand=random.uniform(-1,1)
+        y_rand=random.uniform(-1,1)
+        in_circ=((x_rand)**2+(y_rand)**2)**0.5
+        if in_circ<=1:
+            poi_in_cir+=1
+        else
+            poi_in_sqr+=1
+            
+    pi_est=4*(poi_in_cir/poi_in_sqr)
+    return pi_est
+        
 class TestWallis(unittest.TestCase):
     def test_low_iters(self):
         for i in range(0, 5):
