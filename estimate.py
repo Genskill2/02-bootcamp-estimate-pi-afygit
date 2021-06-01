@@ -10,7 +10,7 @@ def wallis(n):
         in_circ=((x_rand)**2+(y_rand)**2)**0.5
         if in_circ<=1:
             poi_in_cir+=1
-        else
+        else:
             poi_in_sqr+=1
             
     pi_est=4*(poi_in_cir/poi_in_sqr)
