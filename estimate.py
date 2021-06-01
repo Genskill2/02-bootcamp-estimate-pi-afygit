@@ -20,7 +20,8 @@ def wallis(n):
     pi_wal_half=1
     for i in range(1,n):
         pi_wal_half*=((2*n)**2)/(((2*n)-1)*((2*n)+1)
-    pi_wal=pi_wal_half*2
+        
+    pi_wal = pi_wal_half*2
     return pi_wal
 
 class TestWallis(unittest.TestCase):
