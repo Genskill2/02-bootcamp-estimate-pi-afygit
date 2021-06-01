@@ -1,7 +1,7 @@
 import math
 import unittest
 
-def wallis(n):
+def monte_carlo(n):
     poi_in_cir=0
     poi_in_sqr=0
     for i in range(n**2):  #since we need both x and y coordinates
@@ -13,9 +13,16 @@ def wallis(n):
         else:
             poi_in_sqr+=1
             
-    pi_est=4*(poi_in_cir/poi_in_sqr)
-    return pi_est
-        
+    pi_mon=(poi_in_cir/poi_in_sqr)*4
+    return pi_mon
+
+def wallis(n):
+    pi_wal_half=1
+    for i in range(1,n):
+        pi_wal_half*=((2*n)**2)/(((2*n)-1)*((2*n)+1)
+    pi_wal=pi_wal_half*2
+    return pi_wal
+
 class TestWallis(unittest.TestCase):
     def test_low_iters(self):
         for i in range(0, 5):
